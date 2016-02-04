@@ -4,7 +4,7 @@ using System.Collections;
 public class StarController : MonoBehaviour {
 
 
-	public float speed = 4f;
+	public float speed = 5f;
 
 	private Transform _transform;
 	private Vector2 _currentPosition;
@@ -21,16 +21,16 @@ public class StarController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		this._currentPosition = this._transform.position;
-		this._currentPosition -= new Vector2(0, this.speed);
+		this._currentPosition -= new Vector2(this.speed,0);
 		this._transform.position = this._currentPosition;
 
-		if (this._currentPosition.y <= -184) {
+		if (this._currentPosition.x <= -310) {
 			this.Reset ();
 		}
 	}
 
 	public void Reset(){
-		float xPosition = Random.Range (-210f, 210f);
-		this._transform.position = new Vector2 (xPosition, 192f);
+		float xPosition = Random.Range (-200f, 200f);
+		this._transform.position = new Vector2 (340f,xPosition);
 	}
 }

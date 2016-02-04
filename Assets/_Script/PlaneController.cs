@@ -17,7 +17,7 @@ public class PlaneController : MonoBehaviour {
 	void Start () {
 		this._transform = gameObject.GetComponent<Transform> ();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		this._currentPosition = this._transform.position;
@@ -44,25 +44,25 @@ public class PlaneController : MonoBehaviour {
 		this._checkBounds ();
 
 		this._transform.position = this._currentPosition;
-	
+
 	}
 
 
 	private void _checkBounds(){
-		if (this._currentPosition.x >= 190) {
-			this._currentPosition.x = 190;
+		if (this._currentPosition.x >= 270) {
+			this._currentPosition.x = 270;
 		}
 
-		if (this._currentPosition.x <= -190) {
-			this._currentPosition.x = -190;
+		if (this._currentPosition.x <= -275) {
+			this._currentPosition.x = -275;
 		}
 
-		if (this._currentPosition.y >= 145) {
-			this._currentPosition.y = 145;
+		if (this._currentPosition.y >= 189) {
+			this._currentPosition.y = 189;
 		}
 
-		if (this._currentPosition.y <= -145) {
-			this._currentPosition.y = -145;
+		if (this._currentPosition.y <= -189) {
+			this._currentPosition.y = -189;
 		}
 	}
 }

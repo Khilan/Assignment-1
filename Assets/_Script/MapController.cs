@@ -13,23 +13,23 @@ public class MapController : MonoBehaviour {
 		this._transform = gameObject.GetComponent<Transform> ();
 
 		this.Reset();
-	
+
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-	
+
 		this._currentPosition = this._transform.position;
-		this._currentPosition -= new Vector2(0, this.speed);
+		this._currentPosition -= new Vector2(this.speed,0);
 		this._transform.position = this._currentPosition;
 
-		if (this._currentPosition.y <= -319) {
+		if (this._currentPosition.x <= -515) {
 			this.Reset ();
 		}
 	}
 
 	public void Reset(){
-		this._transform.position = new Vector2 (0, 319f);
+		this._transform.position = new Vector2 (515f,0);
 	}
 
 

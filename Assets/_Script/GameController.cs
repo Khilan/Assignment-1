@@ -48,6 +48,8 @@ public class GameController : MonoBehaviour {
 	public Text GameOverLabel;
 	public Text HighScoreLabel;
 	public Button RestartButton;
+	public Image Sad;
+	public Image Happy;
 
 
 
@@ -70,6 +72,8 @@ public class GameController : MonoBehaviour {
 		this.GameOverLabel.enabled = false;
 		this.HighScoreLabel.enabled = false;
 		this.RestartButton.gameObject.SetActive (false);
+		this.Sad.gameObject.SetActive (false);
+		this.Happy.gameObject.SetActive (false);
 
 		for (int EnemyCount = 0; EnemyCount < this.EnemyNumber; EnemyCount++) {
 			Instantiate (enemy.gameObject);
@@ -85,6 +89,12 @@ public class GameController : MonoBehaviour {
 		this.LivesLabel.enabled = false;
 		this.ScoreLabel.enabled = false;
 		this.HighScoreLabel.enabled = true;
+
+		if (this._scoreValue < 500) {
+			this.Sad.gameObject.SetActive (true);
+		} else {
+			this.Happy.gameObject.SetActive (true);
+		}
 
 
 	}

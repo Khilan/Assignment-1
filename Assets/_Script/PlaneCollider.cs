@@ -25,6 +25,7 @@ public class PlaneCollider : MonoBehaviour {
 
 	}
 
+	//Public Access Methods
 	public void OnTriggerEnter2D(Collider2D other){
 
 		if (other.gameObject.CompareTag ("Star")) {

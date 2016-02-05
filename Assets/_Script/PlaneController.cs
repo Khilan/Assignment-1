@@ -28,19 +28,15 @@ public class PlaneController : MonoBehaviour {
 		if (this._playerInputVertical > 0) {
 			this._currentPosition += new Vector2 (0,this.speed);
 		}
-
 		if (this._playerInputVertical < 0) {
 			this._currentPosition -= new Vector2 (0,this.speed);
 		}
-
 		if (this._playerInput > 0) {
 			this._currentPosition += new Vector2 (this.speed,0);
 		}
-
 		if (this._playerInput < 0) {
 			this._currentPosition -= new Vector2 (this.speed,0);
 		}
-
 		this._checkBounds ();
 
 		this._transform.position = this._currentPosition;
@@ -48,19 +44,18 @@ public class PlaneController : MonoBehaviour {
 	}
 
 
+	//Private Access Methods
+	//Checks the Boundary
 	private void _checkBounds(){
 		if (this._currentPosition.x >= 270) {
 			this._currentPosition.x = 270;
 		}
-
 		if (this._currentPosition.x <= -275) {
 			this._currentPosition.x = -275;
 		}
-
 		if (this._currentPosition.y >= 189) {
 			this._currentPosition.y = 189;
 		}
-
 		if (this._currentPosition.y <= -189) {
 			this._currentPosition.y = -189;
 		}

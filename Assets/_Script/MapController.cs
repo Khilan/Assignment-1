@@ -3,8 +3,11 @@ using System.Collections;
 
 public class MapController : MonoBehaviour {
 
+	////Public Variables
 	public float speed = 3f;
 
+
+	//Private Variables 
 	private Transform _transform;
 	private Vector2 _currentPosition;
 
@@ -28,6 +31,7 @@ public class MapController : MonoBehaviour {
 		}
 	}
 
+	//Public Access Methods
 	public void Reset(){
 		this._transform.position = new Vector2 (515f,0);
 	}

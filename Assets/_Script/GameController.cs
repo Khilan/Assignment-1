@@ -10,24 +10,23 @@ public class GameController : MonoBehaviour {
 	private int _livesValue;
 
 
-
-	//public Access methods
+	//Public Access methods
+	//Getter Setter
 	public int ScoreValue{
 		get{
 			return _scoreValue;
 		}	
-
 		set{
 			this._scoreValue = value;
 			this.ScoreLabel.text = "Score: " + this._scoreValue;
 		}
 	}
 
+	//Getter Setter
 	public int LivesValue{
 		get{
 			return _livesValue;
 		}	
-
 		set{
 			this._livesValue = value;
 			if (this._livesValue <= 0) {
@@ -99,6 +98,7 @@ public class GameController : MonoBehaviour {
 
 	}
 
+	////Public Access Methods
 	public void RestartButtonClick(){
 		Application.LoadLevel ("Main");
 	}

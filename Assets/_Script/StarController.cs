@@ -3,9 +3,11 @@ using System.Collections;
 
 public class StarController : MonoBehaviour {
 
-
+	//Public Variables
 	public float speed = 5f;
 
+
+	//Private Variables
 	private Transform _transform;
 	private Vector2 _currentPosition;
 
@@ -29,6 +31,7 @@ public class StarController : MonoBehaviour {
 		}
 	}
 
+	//Public Access Methods
 	public void Reset(){
 		float xPosition = Random.Range (-200f, 200f);
 		this._transform.position = new Vector2 (340f,xPosition);

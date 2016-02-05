@@ -30,7 +30,7 @@ public class EnemyController : MonoBehaviour {
 		this._currentPosition -= new Vector2(this._verticalSpeed,this._horizonalDrift);
 		this._transform.position = this._currentPosition;
 
-		if (this._currentPosition.x <= -310) {
+		if (this._currentPosition.x <= -350) {
 			this.Reset ();
 		}
 	}
